@@ -1,0 +1,6 @@
+docker run -d \
+--name fxd-log_store \
+-e KAFKA_SERVER="172.16.6.127" \
+-e LOG_TOPIC="service-log" \
+-v /data/logs:/opt/logs \
+dockerhub.prod.fxds/fxd-base/fxd-log_store 

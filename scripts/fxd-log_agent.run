@@ -1,0 +1,8 @@
+docker run -d \
+--restart always \
+--name fxd-log_agent \
+-e HOST_NAME=docker4.prod.fxds \
+-e LOG_TOPIC="service-log" \
+-e KAFKA_SERVER="172.16.6.127" \
+-v /data/logs:/data/logs \
+dockerhub.prod.fxds/fxd-base/fxd-log_agent
